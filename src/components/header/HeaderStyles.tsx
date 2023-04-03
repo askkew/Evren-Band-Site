@@ -3,7 +3,6 @@ import { Drawer, IconButton } from '@mui/material';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const HeaderContainer = styled('div')({
-  backdropFilter: 'blur(4px)',
   background: 'transparent',
   color: "#e6f1ff",
   padding: "33px",

@@ -1,10 +1,22 @@
 import React from 'react'
 import './about.css'
-import { SocialWrapper } from './AboutStyles'
+import { MusicButtons, MusicPlayer, SocialWrapper, TempMusicLine } from './AboutStyles'
+import { AiFillPlayCircle, AiFillBackward, AiFillForward } from 'react-icons/ai'
+import { BsVolumeDownFill } from 'react-icons/bs'
+import { Divider } from '@mui/material'
 
 const About = () => {
   return (
     <section id="About">
+      <MusicPlayer>
+        <h1>Latest EP</h1>
+        <TempMusicLine />
+        <MusicButtons>
+          <AiFillBackward style={{fontSize: '50px'}} />
+          <AiFillPlayCircle style={{fontSize: '60px'}} />
+          <AiFillForward style={{fontSize: '50px'}} />
+        </MusicButtons>
+      </MusicPlayer>
       <SocialWrapper>
         <a href="https://www.youtube.com/channel/UCgNt2ZBeaOKxQxXkwDb8nUA" className="icon icon--youtube">
           <i className="ri-youtube-line"></i>
