@@ -17,15 +17,16 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 50vh;
+  background-color: black;
 }
-
+/* 
 #Home {
   background-color: aqua;
 }
 
 #About {
-  background-color: blue;
+  background-color: grey;
 }
 
 #Calendar {
@@ -34,4 +35,4 @@ section {
 
 #Contact {
   background-color: green;
-}
+} */

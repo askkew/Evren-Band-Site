@@ -3,18 +3,26 @@ import { Drawer, IconButton } from '@mui/material';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const HeaderContainer = styled('div')({
+  backdropFilter: 'blur(4px)',
+  background: 'transparent',
+  color: "#e6f1ff",
+  padding: "33px",
+  position: "fixed",
+  height: "1rem",
+  zIndex: 100,
+});
+
+export const HeaderDiv = styled('div')({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: '#000',
-  color: '#fff',
 });
 
 export const DesktopNavbar = styled('div')({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   alignItems: 'center',
   '@media (max-width: 768px)': {
     display: 'none',
@@ -42,6 +50,22 @@ export const StyledIconButton = styled(IconButton)({
     display: 'block',
   },
   display: 'none',
+});
+
+//--------------------------------------
+
+export const StyledUl = styled('ul')({
+  listStyle: 'none',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '10px',
+});
+
+export const StyledLi = styled('li')({
+  listStyle: 'none',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '10px',
 });
 
 //--------------------------------------

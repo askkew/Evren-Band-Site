@@ -1,22 +1,10 @@
 import { Drawer, IconButton } from '@mui/material';
 import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { BurgerMenuIcon, DesktopNavbar, DrawerNavbar, HeaderContainer, StyledIconButton } from './HeaderStyles';
+import { BurgerMenuIcon, DesktopNavbar, DrawerNavbar, HeaderContainer, StyledIconButton, StyledLi, StyledUl, HeaderDiv } from './HeaderStyles';
+import { CustomButton } from '../../pages/About/AboutStyles';
 
 const Header = () => {
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      (document.getElementById("navbar")as HTMLInputElement).style.top = "0";
-    } else {
-      (document.getElementById("navbar")as HTMLInputElement).style.top = "-100px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-
-
-  //================================================================================================
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -34,18 +22,18 @@ const Header = () => {
     }
 
     return (
-      <ul key={content}>
-        <li>
-          <button onClick={handleClickNav}>
-            <span>{content}</span>
-          </button>
-        </li>
-      </ul>
+      <StyledUl key={content}>
+        <StyledLi>
+          <CustomButton id="custombutton" onClick={handleClickNav}>
+            {content}
+          </CustomButton>
+        </StyledLi>
+      </StyledUl>
     );
   }
   return (
-    <HeaderContainer>
-      <div>
+    <HeaderDiv>
+      <HeaderContainer>
         <StyledIconButton onClick={toggleOpen}>
           <BurgerMenuIcon />
         </StyledIconButton>
@@ -55,8 +43,8 @@ const Header = () => {
         <DesktopNavbar>
           {navLinks.map((nav) => renderNavLink(nav))}
         </DesktopNavbar>
-      </div>
-    </HeaderContainer>
+      </HeaderContainer>
+    </HeaderDiv>
   )
 }
 
