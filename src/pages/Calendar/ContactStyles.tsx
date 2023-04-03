@@ -10,4 +10,7 @@ export const CalendarContainer = styled('div')({
   width: '650px',
   height: '650px',
   color: 'white',
+  '@media (max-width: 768px)': {
+    width: '80%',
+  },
 })
