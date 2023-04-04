@@ -42,8 +42,18 @@ export const ContactInputMessage = styled(ContactInput)({
 });
 
 export const ContactButton = styled("button")({
-  width: '100%',
-  height: '35px',
-  margin: '10px',
-  padding: '10px',
+  cursor: 'pointer',
+  textAlign: "center",
+  marginTop: "10px",
+  width: "120px",
+  height: "40px",
+  textDecoration: "none",
+  fontSize: "20px",
+  transform: "translateZ(0)",
+  outline: "2px solid #fff",
+  transitionProperty: "outline-offset, outline-color, background-color",
+  transitionDuration: "0.25s",
+  '&:hover': {
+    outlineOffset: "4px",
+  },
 });

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { AiFillPlayCircle, AiFillBackward, AiFillForward } from 'react-icons/ai'
 
 export const SocialWrapper = styled('div')({
   display: 'grid',
@@ -39,4 +40,22 @@ export const MusicButtons = styled('div')({
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
+});
+
+export const StyledBackButton = styled(AiFillBackward)({
+  fontSize: '50px',
+  cursor: 'pointer',
+  color: 'white',
+});
+
+export const StyledPlayButton = styled(AiFillPlayCircle)({
+  fontSize: '60px',
+  cursor: 'pointer',
+  color: 'white',
+});
+
+export const StyledForwardButton = styled(AiFillForward)({
+  fontSize: '50px',
+  cursor: 'pointer',
+  color: 'white',
 });

@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import { MusicButtons, MusicPlayer, SocialWrapper, TempMusicLine } from './AboutStyles'
+import { MusicButtons, MusicPlayer, SocialWrapper, StyledBackButton, StyledForwardButton, StyledPlayButton, TempMusicLine } from './AboutStyles'
 import { AiFillPlayCircle, AiFillBackward, AiFillForward } from 'react-icons/ai'
 import { BsVolumeDownFill } from 'react-icons/bs'
 import { Divider } from '@mui/material'
@@ -12,9 +12,9 @@ const About = () => {
         <h1>Latest EP</h1>
         <TempMusicLine />
         <MusicButtons>
-          <AiFillBackward style={{fontSize: '50px'}} />
-          <AiFillPlayCircle style={{fontSize: '60px'}} />
-          <AiFillForward style={{fontSize: '50px'}} />
+          <StyledBackButton />
+          <StyledPlayButton />
+          <StyledForwardButton />
         </MusicButtons>
       </MusicPlayer>
       <SocialWrapper>

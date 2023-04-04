@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import styled from '@emotion/styled';
+import { ToastContainer } from 'react-toastify';
 
 const Container = styled('div')({
   display: 'flex',
@@ -17,6 +18,7 @@ const Container = styled('div')({
 function App() {
   return (
     <Container>
+      <ToastContainer />
       <Header />
       <Home />
       <About />
