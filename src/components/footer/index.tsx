@@ -1,9 +1,15 @@
 import React from 'react'
-import { FooterContainer } from './FooterStyles'
+import { FooterContainer, FooterLabel, LinkButton } from './FooterStyles'
+import { FaExternalLinkSquareAlt } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <FooterContainer>Footer</FooterContainer>
+    <FooterContainer>
+      <FooterLabel>Designed and Developed by Lucas Overbey</FooterLabel>
+      <LinkButton href="https://lucasoverbey.dev/" >
+        <FaExternalLinkSquareAlt fontSize="20px"/>
+      </LinkButton>
+    </FooterContainer>
   )
 }
 
